@@ -1,0 +1,27 @@
+"""
+案例：
+    演示张量基本运算：
+
+涉及到的API：
+    add(),sub(),mul(),div(),neg() ---> 加减乘除,取反,substract,multiply,divide,negative
+    add_(),sub_(),mul_(),div_() ,neg_() ---> 功能同上,只不过可以修改源数据,类似Pandas部分的inplace = True
+
+需要你记忆的：
+    1,  可以用+,-,*,/替代上述的函数
+    2,  如果是张量和数值运算,则:该数值会和张量中的每个值依次进行对应的运算
+"""
+
+#导包
+import torch
+
+#1.创建张量.
+t1 = torch.tensor([1,2,3])
+
+#2.演示 加法.
+t2 = t1.add(10) #不会修改源数据
+#t2 = t1.add_(10) #会修改源数据
+t2 = t1 + 10 #也可以这样写
+t1 += 10
+#3.打印结果.
+print(f't1:{t1}')
+print(f't2:{t2}')
