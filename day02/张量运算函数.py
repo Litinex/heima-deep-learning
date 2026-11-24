@@ -51,3 +51,5 @@ print('-' * 30)
 print(t1.exp())
 print('-' * 30)
 
+#log10()
+print(t1.log10())
